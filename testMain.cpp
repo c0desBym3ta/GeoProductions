@@ -1,7 +1,3 @@
-//
-// Created by s3th on 6/23/17.
-//
-
 /*
 #include <iostream>
 #include <string>
@@ -45,8 +41,6 @@ Book::Book(){title =""; year = 0; type;copies = 0; price = 0; discount = 0;}
 Book::Book(string title, int year, char type, int copies, int price, double discount) :
         title(title), year(year),type(type), copies(copies), price(price), discount(discount) {}
 
-
-
 int Book::ageOfBook(int x, Book &obj){
     int age = 0, year, copies, price;
     string title; char type;
@@ -63,6 +57,8 @@ bool Book::operator==(const Book &b) {
     else
         return false;
 }
+
+
 
 void Book::swap(Book &b1, Book &b2) {
     Book tmp;
@@ -84,23 +80,22 @@ int Book::sumAll(Book &b) {
 void manualFillOfBooks(vector<Book> &bookVector);
 void printVectorOfBooks(const vector<Book>&bookVector);
 int searchVectorOfBooks(vector<Book> &bookVector, int value);
-void testFindYear();
 
 int main() {
     vector<Book> myBooks;
     manualFillOfBooks(myBooks);
-    Book obj1, obj2;
+    Book book1, book2;
 
-    for(auto i = 0; i<myBooks.size(); i++){
-       obj1.sumAll(myBooks[i]);
-    }
-
-    obj1.setYear(2005);
-    obj2.setYear(2005);
+    /* for(auto i = 0; i<myBooks.size(); i++){
+        obj1.sumAll(myBooks[i]);
+     }*/
+/*
+    book1.setYear(2005);
+    book2.setYear(2005);
 
     //Manual setting year of two objects to test the overloaded operator.
-    if(obj1 == obj2)
-        cout << "\nBook have the same date realease!" << endl;
+    if(book1 == book2)
+        cout << "\nThe two books have the same date realease!" << endl;
     else
         cout << "Continue...." << endl;
 
@@ -112,24 +107,26 @@ int main() {
     //searchVectorOfBooks(myBooks, value);
 
 
-    Book::swap(obj1, obj2);
+    Book::swap(book1, book2);
 
     int x;
     cout << "\nGive book's age: "; cin >> x;
-    obj1.ageOfBook(x,obj2);
+    book1.ageOfBook(x,book2);
 
 
     return 0;
 }
 
+
 void manualFillOfBooks(vector<Book> &bookVector){
     string bookTitle; char bookType;
-    int bookYear,bookPrice, bookCopies,size;
+    int bookYear,bookPrice, bookCopies,size = bookVector.size(),currEarns, totalErans = 0;
     double bookDiscount;
     // cout << "Available items: ["  << itemVector.size() << "]" << endl;
     cout << "How many books you want to add: "; cin >> size;
     cout << "Adding "<< size << " items." << endl;
     for(auto i = 0; i<size; i++){
+        currEarns = 0;
         cout << "\nBook Name: "; cin >> bookTitle;
         cout << "Book Year: "; cin >> bookYear;
         cout << "Book Type (P = Philosophy, C = Computers, M = Medicine): "; cin >> bookType;
@@ -137,11 +134,15 @@ void manualFillOfBooks(vector<Book> &bookVector){
         cout << "Book Price: "; cin >> bookPrice;
         cout << "Book Discount: "; cin >> bookDiscount;
 
-
         Book newBook(bookTitle, bookYear, bookType, bookCopies, bookPrice, bookDiscount);
         bookVector.push_back(newBook);
         cout << endl;
+        currEarns = bookCopies*bookPrice;
+        totalErans += currEarns;
+        cout << "Current book earns: " << currEarns << "€"<< endl;
+        cout << "Total book earns so far: " << totalErans << "€" << endl;
     }
+    cout << "\nTotal earns from all book sales: " << totalErans << "€" << endl;
     cout << "Books added to the list!\n" << endl;
 }
 
@@ -151,7 +152,7 @@ void printVectorOfBooks(const vector<Book>&bookVector){
     cout << "-------------" << endl;
     for(auto i = 0; i<size; i++);
     //Too big to print. I am getting bored haha.
-        //cout << i+1<< ")" << bookVector[i].getName() <<" "<< itemVector[i].getPrice() <<"€"<< endl;
+    //cout << i+1<< ")" << bookVector[i].getName() <<" "<< itemVector[i].getPrice() <<"€"<< endl;
 
 }
 
@@ -169,6 +170,5 @@ int searchVectorOfBooks(vector<Book> &bookVector, int value){
         return -1;
     }
 }
-
 
 */
