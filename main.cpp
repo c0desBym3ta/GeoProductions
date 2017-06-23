@@ -4,7 +4,8 @@
 void manualFillOfBooks(vector<Book> &bookVector);
 void printVectorOfBooks(const vector<Book>&bookVector);
 int searchVectorOfBooks(vector<Book> &bookVector, int value);
-void testFindYear()
+void testFindYear();
+
 int main() {
     vector<Book> myBooks;
     manualFillOfBooks(myBooks);
@@ -14,14 +15,22 @@ int main() {
        obj1.sumAll(myBooks[i]);
     }
 
-    //Manual setting year of two objects to test the overloaded operator.
     obj1.setYear(2005);
     obj2.setYear(2005);
 
+    //Manual setting year of two objects to test the overloaded operator.
     if(obj1 == obj2)
         cout << "\nBook have the same date realease!" << endl;
     else
         cout << "Continue...." << endl;
+
+    //Making a third object to test our search function.
+    //For making a test remove the comments.
+    //Book obj3;
+    //obj3.setYear(2005);
+    //int value = obj3.getYear();
+    //searchVectorOfBooks(myBooks, value);
+
 
     Book::swap(obj1, obj2);
 
@@ -32,8 +41,6 @@ int main() {
 
     return 0;
 }
-
-
 
 
 void manualFillOfBooks(vector<Book> &bookVector){
@@ -73,9 +80,13 @@ void printVectorOfBooks(const vector<Book>&bookVector){
 int searchVectorOfBooks(vector<Book> &bookVector, int value){
     int size = bookVector.size();
     for(auto i = 0; i<size; i++){
-        if(bookVector[i].getYear() == value)
+        if(bookVector[i].getYear() == value) {
+            cout << "\nTow or more books have the same date realease!\n" << endl;
             return i;
+        }
+        else{
+            cout << "\nNo match for book's year or realease found!\n"  << endl;
+        }
         return -1;
-
     }
 }

@@ -2,6 +2,7 @@
 // Created by s3th on 6/23/17.
 //
 
+/*
 #include <iostream>
 #include <string>
 #include <vector>
@@ -39,7 +40,7 @@ private:
     int price;
     double discount;
 };
-    
+
 Book::Book(){title =""; year = 0; type;copies = 0; price = 0; discount = 0;}
 Book::Book(string title, int year, char type, int copies, int price, double discount) :
         title(title), year(year),type(type), copies(copies), price(price), discount(discount) {}
@@ -83,6 +84,7 @@ int Book::sumAll(Book &b) {
 void manualFillOfBooks(vector<Book> &bookVector);
 void printVectorOfBooks(const vector<Book>&bookVector);
 int searchVectorOfBooks(vector<Book> &bookVector, int value);
+void testFindYear();
 
 int main() {
     vector<Book> myBooks;
@@ -90,17 +92,25 @@ int main() {
     Book obj1, obj2;
 
     for(auto i = 0; i<myBooks.size(); i++){
-        obj1.sumAll(myBooks[i]);
+       obj1.sumAll(myBooks[i]);
     }
 
-    //Manual setting year of two objects to test the overloaded operator.
     obj1.setYear(2005);
     obj2.setYear(2005);
 
+    //Manual setting year of two objects to test the overloaded operator.
     if(obj1 == obj2)
         cout << "\nBook have the same date realease!" << endl;
     else
         cout << "Continue...." << endl;
+
+    //Making a third object to test our search function.
+    //For making a test remove the comments.
+    //Book obj3;
+    //obj3.setYear(2005);
+    //int value = obj3.getYear();
+    //searchVectorOfBooks(myBooks, value);
+
 
     Book::swap(obj1, obj2);
 
@@ -127,6 +137,7 @@ void manualFillOfBooks(vector<Book> &bookVector){
         cout << "Book Price: "; cin >> bookPrice;
         cout << "Book Discount: "; cin >> bookDiscount;
 
+
         Book newBook(bookTitle, bookYear, bookType, bookCopies, bookPrice, bookDiscount);
         bookVector.push_back(newBook);
         cout << endl;
@@ -140,7 +151,7 @@ void printVectorOfBooks(const vector<Book>&bookVector){
     cout << "-------------" << endl;
     for(auto i = 0; i<size; i++);
     //Too big to print. I am getting bored haha.
-    //cout << i+1<< ")" << bookVector[i].getName() <<" "<< itemVector[i].getPrice() <<"€"<< endl;
+        //cout << i+1<< ")" << bookVector[i].getName() <<" "<< itemVector[i].getPrice() <<"€"<< endl;
 
 }
 
@@ -148,10 +159,16 @@ void printVectorOfBooks(const vector<Book>&bookVector){
 int searchVectorOfBooks(vector<Book> &bookVector, int value){
     int size = bookVector.size();
     for(auto i = 0; i<size; i++){
-        if(bookVector[i].getYear() == value)
+        if(bookVector[i].getYear() == value) {
+            cout << "\nTow or more books have the same date realease!\n" << endl;
             return i;
+        }
+        else{
+            cout << "\nNo match for book's year or realease found!\n"  << endl;
+        }
         return -1;
-
     }
 }
 
+
+*/
