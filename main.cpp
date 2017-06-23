@@ -4,7 +4,7 @@
 void manualFillOfBooks(vector<Book> &bookVector);
 void printVectorOfBooks(const vector<Book>&bookVector);
 int searchVectorOfBooks(vector<Book> &bookVector, int value);
-
+void testFindYear()
 int main() {
     vector<Book> myBooks;
     manualFillOfBooks(myBooks);
@@ -26,7 +26,7 @@ int main() {
     Book::swap(obj1, obj2);
 
     int x;
-    cout << "Give book's age: "; cin >> x;
+    cout << "\nGive book's age: "; cin >> x;
     obj1.ageOfBook(x,obj2);
 
 
@@ -46,7 +46,7 @@ void manualFillOfBooks(vector<Book> &bookVector){
     for(auto i = 0; i<size; i++){
         cout << "\nBook Name: "; cin >> bookTitle;
         cout << "Book Year: "; cin >> bookYear;
-        cout << "Book Type: "; cin >> bookType;
+        cout << "Book Type (P = Philosophy, C = Computers, M = Medicine): "; cin >> bookType;
         cout << "Book Copies: "; cin >> bookCopies;
         cout << "Book Price: "; cin >> bookPrice;
         cout << "Book Discount: "; cin >> bookDiscount;

@@ -39,12 +39,7 @@ private:
     int price;
     double discount;
 };
-
-
-
-
-
-
+    
 Book::Book(){title =""; year = 0; type;copies = 0; price = 0; discount = 0;}
 Book::Book(string title, int year, char type, int copies, int price, double discount) :
         title(title), year(year),type(type), copies(copies), price(price), discount(discount) {}
@@ -110,13 +105,12 @@ int main() {
     Book::swap(obj1, obj2);
 
     int x;
-    cout << "Give book's age: "; cin >> x;
+    cout << "\nGive book's age: "; cin >> x;
     obj1.ageOfBook(x,obj2);
 
 
     return 0;
 }
-
 
 void manualFillOfBooks(vector<Book> &bookVector){
     string bookTitle; char bookType;
@@ -128,11 +122,10 @@ void manualFillOfBooks(vector<Book> &bookVector){
     for(auto i = 0; i<size; i++){
         cout << "\nBook Name: "; cin >> bookTitle;
         cout << "Book Year: "; cin >> bookYear;
-        cout << "Book Type: "; cin >> bookType;
+        cout << "Book Type (P = Philosophy, C = Computers, M = Medicine): "; cin >> bookType;
         cout << "Book Copies: "; cin >> bookCopies;
         cout << "Book Price: "; cin >> bookPrice;
         cout << "Book Discount: "; cin >> bookDiscount;
-
 
         Book newBook(bookTitle, bookYear, bookType, bookCopies, bookPrice, bookDiscount);
         bookVector.push_back(newBook);

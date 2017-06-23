@@ -9,3 +9,5 @@ CMakeFiles/GeoPro.dir/main.cpp.o: ../Book.h
 CMakeFiles/GeoPro.dir/main.cpp.o: ../header.h
 CMakeFiles/GeoPro.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/GeoPro.dir/testMain.cpp.o: ../testMain.cpp
+
