@@ -7,10 +7,6 @@
 #include <vector>
 using namespace std;
 
-void manualFillOfBooks(vector<Book> &bookVector);
-void printVectorOfBooks(const vector<Book>&bookVector);
-int searchVectorOfBooks(vector<Book> &bookVector, int value);
-
 class Book {
 public:
     Book();
@@ -89,10 +85,9 @@ int Book::sumAll(Book &b) {
     cout << "Total money from the sales: " << sum << "€" << endl;
 }
 
-
-
-
-
+void manualFillOfBooks(vector<Book> &bookVector);
+void printVectorOfBooks(const vector<Book>&bookVector);
+int searchVectorOfBooks(vector<Book> &bookVector, int value);
 
 int main() {
     vector<Book> myBooks;
