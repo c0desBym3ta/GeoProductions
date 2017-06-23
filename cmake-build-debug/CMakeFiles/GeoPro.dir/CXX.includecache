@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/s3th/GeoPro/Book.cpp
+Book.h
+/home/s3th/GeoPro/Book.h
+
+/home/s3th/GeoPro/Book.h
+header.h
+/home/s3th/GeoPro/header.h
+
+/home/s3th/GeoPro/header.h
+iostream
+-
+string
+-
+vector
+-
+
+/home/s3th/GeoPro/main.cpp
+header.h
+/home/s3th/GeoPro/header.h
+Book.h
+/home/s3th/GeoPro/Book.h
+
