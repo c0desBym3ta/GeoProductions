@@ -3,5 +3,5 @@ project(GeoPro)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp Book.cpp Book.h header.h)
+set(SOURCE_FILES main.cpp Book.cpp Book.h header.h testMain.cpp)
 add_executable(GeoPro ${SOURCE_FILES})

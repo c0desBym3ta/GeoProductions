@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/GeoPro.dir/build.make CMakeFiles/GeoPro.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+testMain.o: testMain.cpp.o
+
+.PHONY : testMain.o
+
+# target to build an object file
+testMain.cpp.o:
+	$(MAKE) -f CMakeFiles/GeoPro.dir/build.make CMakeFiles/GeoPro.dir/testMain.cpp.o
+.PHONY : testMain.cpp.o
+
+testMain.i: testMain.cpp.i
+
+.PHONY : testMain.i
+
+# target to preprocess a source file
+testMain.cpp.i:
+	$(MAKE) -f CMakeFiles/GeoPro.dir/build.make CMakeFiles/GeoPro.dir/testMain.cpp.i
+.PHONY : testMain.cpp.i
+
+testMain.s: testMain.cpp.s
+
+.PHONY : testMain.s
+
+# target to generate assembly for a file
+testMain.cpp.s:
+	$(MAKE) -f CMakeFiles/GeoPro.dir/build.make CMakeFiles/GeoPro.dir/testMain.cpp.s
+.PHONY : testMain.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... testMain.o"
+	@echo "... testMain.i"
+	@echo "... testMain.s"
 .PHONY : help
 
 

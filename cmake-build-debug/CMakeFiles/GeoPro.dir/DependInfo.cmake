@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/s3th/GeoPro/Book.cpp" "/home/s3th/GeoPro/cmake-build-debug/CMakeFiles/GeoPro.dir/Book.cpp.o"
   "/home/s3th/GeoPro/main.cpp" "/home/s3th/GeoPro/cmake-build-debug/CMakeFiles/GeoPro.dir/main.cpp.o"
+  "/home/s3th/GeoPro/testMain.cpp" "/home/s3th/GeoPro/cmake-build-debug/CMakeFiles/GeoPro.dir/testMain.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

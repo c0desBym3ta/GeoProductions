@@ -94,6 +94,9 @@
 		<Unit filename="/home/s3th/GeoPro/main.cpp">
 			<Option target="GeoPro"/>
 		</Unit>
+		<Unit filename="/home/s3th/GeoPro/testMain.cpp">
+			<Option target="GeoPro"/>
+		</Unit>
 		<Unit filename="/home/s3th/GeoPro/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

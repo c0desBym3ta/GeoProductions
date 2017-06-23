@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GeoPro.dir/main.cpp.o"
   "CMakeFiles/GeoPro.dir/Book.cpp.o"
+  "CMakeFiles/GeoPro.dir/testMain.cpp.o"
   "GeoPro.pdb"
   "GeoPro"
 )

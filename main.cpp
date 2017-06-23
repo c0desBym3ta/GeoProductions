@@ -3,6 +3,7 @@
 
 void manualFillOfBooks(vector<Book> &bookVector);
 void printVectorOfBooks(const vector<Book>&bookVector);
+int searchVectorOfBooks(vector<Book> &bookVector, int value);
 
 int main() {
     vector<Book> myBooks;
@@ -13,6 +14,7 @@ int main() {
        obj1.sumAll(myBooks[i]);
     }
 
+    //Manual setting year of two objects to test the overloaded operator.
     obj1.setYear(2005);
     obj2.setYear(2005);
 
@@ -21,7 +23,7 @@ int main() {
     else
         cout << "Continue...." << endl;
 
-    Book::swap(obj2, obj2);
+    Book::swap(obj1, obj2);
 
     int x;
     cout << "Give book's age: "; cin >> x;
@@ -62,6 +64,18 @@ void printVectorOfBooks(const vector<Book>&bookVector){
     cout << "LIST OF ITEMS"<<endl;
     cout << "-------------" << endl;
     for(auto i = 0; i<size; i++);
+    //Too big to print. I am getting bored haha.
         //cout << i+1<< ")" << bookVector[i].getName() <<" "<< itemVector[i].getPrice() <<"€"<< endl;
 
+}
+
+//Testing a search vector. Not ready yet.
+int searchVectorOfBooks(vector<Book> &bookVector, int value){
+    int size = bookVector.size();
+    for(auto i = 0; i<size; i++){
+        if(bookVector[i].getYear() == value)
+            return i;
+        return -1;
+
+    }
 }
